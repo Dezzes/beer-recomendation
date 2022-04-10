@@ -33,17 +33,17 @@ export default {
   },
   methods: {
     async fetchBeer() {
-      const response = await axios.get(
-        "https://random-data-api.com/api/beer/random_beer"
-      );
-      this.beer = response.data;
+      await axios
+        .get("https://random-data-api.com/api/beer/random_beer")
+        .then((response) => {
+          this.beer = response.data;
+        });
     },
     async fetchUser() {
       await axios
         .get("https://random-data-api.com/api/users/random_user ")
         .then((response) => {
           this.user = response.data;
-          console.log(this.user);
         });
     },
   },

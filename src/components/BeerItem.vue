@@ -9,7 +9,10 @@
         <p><strong>Alcohol: </strong>{{ beer.alcohol }}</p>
       </div>
       <div class="content__img-container">
-        <img src="../assets/img/beer-icon.png" alt="beer-icon" />
+        <img
+          src="https://img.icons8.com/officel/80/000000/beer.png"
+          alt="beer-icon"
+        />
       </div>
     </div>
     <button @click="changeBeer" class="content__btn">Change it</button>
